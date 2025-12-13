@@ -1,3 +1,5 @@
+#1А
+
 #Задачи на арифметические операции
 
 """a = int(input())
@@ -173,3 +175,132 @@ while 0 == 0:
     if a % 2 == 0:
         k += 1
 print(k)""" #1А Чётные числа последовательности
+
+#1Б
+
+#Задачи на массивы
+
+"""n = int(input())
+a = list(map(int, input().split()))
+for i in range(n):
+    if i % 2 == 0:
+        print(a[i], end=" ")""" #1Б Четные индексы
+
+"""n = int(input())
+a = list(map(int, input().split()))
+for i in range(n):
+    if a[i] % 2 == 0:
+        print(a[i], end=" ")""" #1Б Четные элементы
+
+"""n = int(input())
+a = list(map(int, input().split()))
+k = 0
+for i in range(1, n):
+    if a[i] > a[i - 1]:
+        k += 1
+print(k)""" #1Б Больше предыдущего
+
+"""n = int(input())
+a = list(map(int, input().split()))
+for i in range(n // 2):
+    buf = a[i]
+    a[i] = a[-i - 1]
+    a[-i - 1] = buf
+print(*a)""" #1Б Обратный порядок
+
+"""n = int(input())
+a = list(map(int, input().split()))
+last = a[-1]
+for i in range(n - 1, 0, -1):
+    a[i] = a[i -1]
+a[0] = last 
+print(*a)""" #1Б Циклически вправо
+
+"""n = int(input())
+a = list(map(int, input().split()))
+max = a[0]
+for i in range(1, n):
+    if a[i] > max:
+        max = a[i]
+print(max)""" #1Б Максимум в массиве
+
+"""n = int(input())
+a = []
+k = 0 
+for i in range(n):
+    a.append(list(map(int, input().split())))
+for i in range(n):
+    for j in range(n):
+        if a[i][j] != a[j][i]:
+            k = 1
+            break
+    if k == 1:
+        break
+if k == 0:
+    print("YES")
+else:
+    print("NO")""" #1Б Симметрия матрицы
+
+"""n, m = map(int, input().split())
+a = []
+for i in range(n):
+    a.append(list(map(int, input().split())))
+i_max = 0
+j_max = 0
+max = a[0][0]
+for i in range(n):
+    for j in range(m):
+        if a[i][j] > max:
+            max = a[i][j]
+            i_max = i
+            j_max = j
+print(max)
+print(i_max, j_max)""" #1Б Максимум в матрице
+
+"""n, m = map(int, input().split())
+a = [[1] * m for i in range(n)]
+for i in range(1, n):
+    for j in range(1, m):
+        a[i][j] = a[i-1][j] + a[i][j-1]
+for i in range(len(a)): 
+    print(*a[i])""" #1Б Треугольник Паскаля
+
+#Задачи на символы и строки
+
+"""ch = input()
+if ch >= "0" and ch <= "9":
+    print("yes")
+else:
+    print("no")""" #1Б Цифра?
+
+'''ch = input()
+if ch >= 'a' and ch <= 'z':
+    ch = chr(ord(ch) - 32)
+    print(ch)
+else:
+    print(ch)''' #1Б Верхний регистр
+
+'''ch1 = input()
+ch2 = input()
+if ch1 == ch2:
+    print('yes')
+else:
+    print('no')''' #1Б Совпадение строк
+
+'''ch = input()
+k = 1
+for i in range(len(ch)):
+    if ch[i] == " ":
+        k += 1
+print(k)''' #1Б Количество слов
+
+'''ch = input()
+k = 'yes'
+for i in range(len(ch) // 2):
+    if ch[i] != ch[i - 1]:
+        k = 'no'
+    break
+print(k)''' #1Б Палиндром без пробелов
+
+#Задачи на вещественные числа
+        
