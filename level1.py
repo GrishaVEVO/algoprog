@@ -303,4 +303,67 @@ for i in range(len(ch) // 2):
 print(k)''' #1Б Палиндром без пробелов
 
 #Задачи на вещественные числа
-        
+
+'''a = float(input())
+b = float(input())
+c = float(input())
+if abs(a + b - c) < 1e-6:
+    print('YES')
+else:
+    print('NO')''' #1Б Вещественное равенство
+
+'''h = int(input())
+m = int(input())
+s = int(input())
+print(30*h + 30/60*m + 30/60/60*s)''' #1Б Угол часовой стрелки
+
+'''x = float(input())
+y = float(input())
+k = 1
+while y > x + 1e-5:
+    x = 1.7 * x
+    k += 1
+print(k)''' #1Б Пробежка за день
+
+'''# читаем всю строку и разбиваем на числа
+line = input().split()
+
+# если в строке 2 числа — берем их
+if len(line) == 2:
+    x, y = map(float, line)
+else:
+    # иначе читаем вторую строку
+    x = float(line[0])
+    y = float(input())
+
+k = 1
+total = x
+while y > total + 1e-5:
+    x *= 1.7
+    total += x
+    k += 1
+print(k)''' #1Б Пробежка за все дни
+
+'''x, y, z = map(float, input().split())
+n = int(input())
+tot_x = 0
+tot_y = 0
+tot_z = 0
+for i in range(n):
+    a, b, c, q = map(float, input().split())
+    tot_x += a * q
+    tot_y += b * q
+    tot_z += c * q
+if (tot_x + 1e-4 > x) and (tot_y + 1e-4 > y) and (tot_z + 1e-4 > z):
+    print("YES")
+else:
+    print("NO")''' #1Б Правильное питание
+
+'''n = int(input())
+factorial = 1
+total = 1
+for i in range(1, n + 1):
+    factorial *= i
+    total += 1/factorial
+print(total)''' #1Б Деление на факториал
+
